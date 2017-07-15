@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.test.demo.service.HelloService;
 
 @RestController
+@RequestMapping("/hello")
 public class HelloWorldController {
     
 	@Resource

@@ -16,6 +16,7 @@ public class LogBackController {
     String test(HttpServletRequest req){
         logger.info("测试日志");
         logger.error("error");
+        logger.error("ddddd", new NullPointerException());
         return "Hello World!";
     }
 }

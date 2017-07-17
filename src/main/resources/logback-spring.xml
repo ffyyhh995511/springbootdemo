@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <configuration>
 
+	<property name="LOG_HOME" value="D:/logBack" />
+	
 	<appender name="consoleLog" class="ch.qos.logback.core.ConsoleAppender">
 		<layout class="ch.qos.logback.classic.PatternLayout">
 			<pattern>%d - %msg%n</pattern>
@@ -15,12 +17,13 @@
 			<onMismatch>ACCEPT</onMismatch>
 		</filter>
 		<encoder>
-			<pattern>%msg%n</pattern>
+			<pattern>%d{yyyy-MM-dd HH:mm:ss} %level [%thread] %caller{1} - %msg%n</pattern>
 		</encoder>
 		<!--滚动策略 -->
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
 			<!--路径 -->
-			<fileNamePattern>/var/log/tomcat/sell/info.%d.log</fileNamePattern>
+			<!-- <fileNamePattern>/var/log/tomcat/sell/info.%d.log</fileNamePattern> -->
+			<fileNamePattern>${LOG_HOME}/info/info.%d.log</fileNamePattern>
 		</rollingPolicy>
 	</appender>
 
@@ -30,12 +33,12 @@
 			<level>ERROR</level>
 		</filter>
 		<encoder>
-			<pattern>%msg%n</pattern>
+			<pattern>%d{yyyy-MM-dd HH:mm:ss} %level [%thread] %caller{1} - %msg%n</pattern>
 		</encoder>
 		<!--滚动策略 -->
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
 			<!--路径 -->
-			<fileNamePattern>/var/log/tomcat/sell/error.%d.log</fileNamePattern>
+			<fileNamePattern>${LOG_HOME}/error/error.%d.log</fileNamePattern>
 		</rollingPolicy>
 	</appender>
 

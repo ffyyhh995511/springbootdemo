@@ -5,6 +5,7 @@ import java.util.Map;
 
 import javax.annotation.Resource;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -13,13 +14,16 @@ import com.test.demo.service.HelloService;
 @RestController
 @RequestMapping("/hello")
 public class HelloWorldController {
+	
+	@Value("${t}")
+	private String test;
     
 	@Resource
 	HelloService helloService;
 	
 	@RequestMapping("/hello")
     public String index() {
-        return "Hello World";
+        return test;
     }
     
     @RequestMapping("/hello2")

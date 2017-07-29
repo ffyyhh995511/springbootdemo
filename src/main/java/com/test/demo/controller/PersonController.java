@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.test.demo.bean.Person;
-import com.test.demo.dao.PersonRepository;
+import com.test.demo.repository.PersonRepository;
 import com.test.demo.service.PersonService;
 @RestController
 @RequestMapping("/person")

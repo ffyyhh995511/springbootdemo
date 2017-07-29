@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.test.demo.bean.Person;
-import com.test.demo.dao.PersonRepository;
+import com.test.demo.repository.PersonRepository;
 
 @Service
 public class PersonService {

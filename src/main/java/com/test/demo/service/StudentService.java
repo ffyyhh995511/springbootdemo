@@ -6,8 +6,8 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.test.demo.bean.Person;
 import com.test.demo.bean.Student;
-import com.test.demo.dao.PersonRepository;
-import com.test.demo.dao.StudentRespsitory;
+import com.test.demo.repository.PersonRepository;
+import com.test.demo.repository.StudentRespsitory;
 
 @Service
 public class StudentService {

@@ -11,7 +11,8 @@ import org.springframework.context.annotation.Configuration;
  * @author Administrator
  *
  */
-@Configuration  
+//@Configuration  
+//application.properties 也可以定义，就不用了Configuration 这个配置了
 public class WebServerConfiguration  
 {  
     @Bean  

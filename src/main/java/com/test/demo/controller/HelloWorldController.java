@@ -15,7 +15,7 @@ import com.test.demo.service.HelloService;
 @RequestMapping("/hello")
 public class HelloWorldController {
 	
-	@Value("${t}")
+	@Value("${env}")
 	private String test;
     
 	@Resource

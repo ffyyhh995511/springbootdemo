@@ -14,9 +14,25 @@ public class LogBackController {
 	private static final Logger logger = LoggerFactory.getLogger(LogBackController.class);
     @RequestMapping("/test1")
     String test(HttpServletRequest req){
-        logger.info("测试日志");
-        logger.error("error");
-        logger.error("ddddd", new NullPointerException());
+    	 logger.debug("日志输出测试 Debug");
+    	 logger.trace("日志输出测试 Trace");
+    	 logger.info("日志输出测试 Info");
+    	 logger.error("日志输出测试 error");
+        return "Hello World!";
+    }
+    
+    @RequestMapping("/test2")
+    String test(){
+    	int i=1/0; 
+    	/*try {
+    		throw new NullPointerException();
+		} catch (Exception e) {
+			logger.debug("空指针报错 Debug");
+	    	 logger.trace("空指针报错 Trace");
+	    	 logger.info("空指针报错 Info");
+	    	 logger.error("空指针报错 error");
+			logger.error("空指针报错",e);
+		}*/
         return "Hello World!";
     }
 }

@@ -14,7 +14,6 @@ public class DemoApplication {
     
 	public static void main(String[] args) {
 		SpringApplication app = new SpringApplication(DemoApplication.class);
-		// app.setBannerMode(Banner.Mode.OFF);
 		ApplicationContext ctx = app.run(args);
 		String[] activeProfiles = ctx.getEnvironment().getActiveProfiles();
 		for (String profile : activeProfiles) {
